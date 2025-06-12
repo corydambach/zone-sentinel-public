@@ -1,4 +1,3 @@
-
 import { Download, Search, Upload } from "lucide-react";
 
 const HowItWorks = () => {
@@ -21,7 +20,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-zs-gray">
+    <section id="how-it-works" className="py-20 bg-zs-gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">

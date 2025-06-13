@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -12,14 +11,11 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background satellite image overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
         }}
       />
-      
-      {/* Blue filter overlay */}
-      <div className="absolute inset-0 bg-blue-900/40" />
       
       {/* Gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-zs-navy/5 via-transparent to-zs-purple/5" />

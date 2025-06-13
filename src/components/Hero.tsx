@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background satellite image overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -21,10 +21,10 @@ const Hero = () => {
       {/* Gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-zs-navy/5 via-transparent to-zs-purple/5" />
       
-      <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
+      <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">
           {/* Main headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-zs-navy mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-zs-navy mb-4 leading-tight">
             Satellite-Speed
             <span className="block bg-gradient-to-r from-zs-orange to-zs-purple bg-clip-text text-transparent">
               Code Enforcement.
@@ -32,12 +32,12 @@ const Hero = () => {
           </h1>
           
           {/* Sub-lines */}
-          <div className="space-y-3 mb-8">
-            <p className="text-xl md:text-2xl text-zs-navy font-semibold">
+          <div className="space-y-2 mb-6">
+            <p className="text-lg md:text-xl text-zs-navy font-semibold">
               Abandoned-Vehicle Detection — 
               <span className="text-zs-orange"> Live Today.</span>
             </p>
-            <p className="text-lg md:text-xl text-gray-600">
+            <p className="text-base md:text-lg text-gray-600">
               Full Violation Coverage Launching 
               <span className="text-zs-purple font-semibold"> Q4 2025.</span>
             </p>

@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
@@ -38,13 +36,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
               src="/lovable-uploads/2014d85b-d3d3-4831-9531-eaf85094ec1b.png" 
               alt="ZoneSentinel" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
@@ -72,4 +70,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

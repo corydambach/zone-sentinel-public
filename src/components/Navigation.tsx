@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
@@ -41,9 +42,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
-              src="/lovable-uploads/98520d7f-a700-43ca-a199-f32469d0ac36.png" 
+              src="/lovable-uploads/2014d85b-d3d3-4831-9531-eaf85094ec1b.png" 
               alt="ZoneSentinel" 
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </div>
 
@@ -71,3 +72,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

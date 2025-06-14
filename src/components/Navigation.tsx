@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 
 const Navigation = () => {
@@ -40,7 +41,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
-              src="/lovable-uploads/2014d85b-d3d3-4831-9531-eaf85094ec1b.png" 
+              src="/lovable-uploads/bc9b614b-ea15-4e60-a3e5-129a29cf9033.png" 
               alt="ZoneSentinel" 
               className="h-16 w-auto"
             />

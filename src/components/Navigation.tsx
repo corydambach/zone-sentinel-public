@@ -41,11 +41,11 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo - smaller size */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
-              src="/lovable-uploads/aafe3748-8d30-4393-b71c-81d341a5aa56.png" 
+              src="/lovable-uploads/bab7bf8e-bd9f-4bfe-8029-3a34406adb9f.png" 
               alt="ZoneSentinel" 
               className="h-10 w-auto"
             />

@@ -45,7 +45,7 @@ const Navigation = () => {
           {/* Logo - smaller size */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
-              src="/lovable-uploads/bc9b614b-ea15-4e60-a3e5-129a29cf9033.png" 
+              src="/lovable-uploads/aafe3748-8d30-4393-b71c-81d341a5aa56.png" 
               alt="ZoneSentinel" 
               className="h-10 w-auto"
             />

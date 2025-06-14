@@ -40,14 +40,14 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="features" className="py-20 bg-gradient-to-b from-zs-cloud-white to-zs-navy-10">
       <div className="container mx-auto px-4">
         {/* Features Available Today */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-zs-primary-navy mb-4 font-inter">
             Features Available Today
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-zs-gray-90 max-w-3xl mx-auto">
             Start using ZoneSentinel's abandoned vehicle detection with these powerful tools
           </p>
         </div>
@@ -56,13 +56,13 @@ const Features = () => {
           {availableFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-zs-cloud-white">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zs-orange to-zs-orange/80 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <IconComponent className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 bg-zs-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="h-8 w-8 text-zs-cloud-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-zs-navy mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-zs-primary-navy mb-4 font-inter">{feature.title}</h3>
+                  <p className="text-zs-gray-90 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             );
@@ -71,7 +71,7 @@ const Features = () => {
 
         {/* Coming Q4 2025 */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-zs-primary-navy mb-4 font-inter">
             Coming Q4 2025
           </h2>
         </div>
@@ -80,13 +80,13 @@ const Features = () => {
           {comingSoonFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Card key={index} className="border-0 shadow-lg bg-gradient-to-br from-gray-50 to-gray-100 opacity-75">
+              <Card key={index} className="border-0 shadow-lg bg-gradient-to-br from-zs-navy-10 to-zs-gray-40/30 opacity-75">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <IconComponent className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-zs-gray-90 to-zs-gray-40 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="h-8 w-8 text-zs-cloud-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-600 mb-4">{feature.title}</h3>
-                  <p className="text-gray-500 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-zs-gray-90 mb-4 font-inter">{feature.title}</h3>
+                  <p className="text-zs-gray-90/70 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             );

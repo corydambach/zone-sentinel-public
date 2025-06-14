@@ -63,13 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// ZoneSentinel brand colors
+				// Updated ZoneSentinel brand colors
 				zs: {
-					orange: '#FF7F1A',
-					purple: '#6B0EB4',
-					navy: '#0D1B2A',
-					gray: '#F8F9FA'
+					'primary-navy': '#081A2F',
+					'navy-70': '#123F66',
+					'navy-10': '#E8EEF4',
+					'accent-orange': '#F46A1D',
+					'orange-20': '#FFD3B2',
+					'accent-salmon': '#FF6D75',
+					'deep-purple': '#7044FF',
+					'gray-90': '#4B5563',
+					'gray-40': '#D1D5DB',
+					'cloud-white': '#FFFFFF'
 				}
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
+			backgroundImage: {
+				'zs-gradient': 'linear-gradient(180deg, #F46A1D 0%, #BE2E77 50%, #7044FF 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

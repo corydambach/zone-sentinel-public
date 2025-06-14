@@ -1,72 +1,96 @@
-import { CheckCircle, Clock } from "lucide-react";
+
+import { Map, Filter, FileText, Trash2, Building2, Trees } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Features = () => {
-  const liveFeatures = [
-    "Abandoned vehicle detection",
-    "High-resolution satellite imagery processing",
-    "Automated violation alerts",
-    "Real-time processing pipeline"
+  const availableFeatures = [
+    {
+      icon: Map,
+      title: "Street-Level Map Viewer",
+      description: "Interactive mapping interface with satellite overlay and street-level detail for precise violation identification"
+    },
+    {
+      icon: Filter,
+      title: "Filter by Block",
+      description: "Advanced filtering capabilities to focus enforcement efforts on specific neighborhoods or districts"
+    },
+    {
+      icon: FileText,
+      title: "CSV Export",
+      description: "One-click export of violation data for integration with existing enforcement workflows and reporting systems"
+    }
   ];
 
   const comingSoonFeatures = [
-    "Illegal dumping detection",
-    "Unsafe structure identification", 
-    "Overgrown lot monitoring",
-    "Comprehensive violation dashboard",
-    "Mobile enforcement app",
-    "Advanced reporting analytics"
+    {
+      icon: Trash2,
+      title: "Illegal Dumps",
+      description: "Automated detection of unauthorized waste disposal sites"
+    },
+    {
+      icon: Building2,
+      title: "Unsafe Structures",
+      description: "Identification of deteriorating buildings and safety hazards"
+    },
+    {
+      icon: Trees,
+      title: "Overgrown Lots",
+      description: "Detection of unmaintained properties and vegetation violations"
+    }
   ];
 
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
+        {/* Features Available Today */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">
-            Features & Capabilities
+            Features Available Today
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Start with abandoned vehicle detection today, expand to full code enforcement coverage in Q4 2025
+            Start using ZoneSentinel's abandoned vehicle detection with these powerful tools
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Live Today */}
-          <div className="bg-gradient-to-br from-zs-orange/5 to-zs-orange/10 rounded-xl p-8 border border-zs-orange/20">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-zs-orange rounded-xl flex items-center justify-center mr-4">
-                <CheckCircle className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-zs-navy">Live Today</h3>
-            </div>
-            
-            <ul className="space-y-4">
-              {liveFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-zs-orange mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Coming Soon */}
-          <div className="bg-gradient-to-br from-zs-purple/5 to-zs-purple/10 rounded-xl p-8 border border-zs-purple/20">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-zs-purple rounded-xl flex items-center justify-center mr-4">
-                <Clock className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-zs-navy">Coming Q4 2025</h3>
-            </div>
-            
-            <ul className="space-y-4">
-              {comingSoonFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <Clock className="h-5 w-5 text-zs-purple mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+          {availableFeatures.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zs-orange to-zs-orange/80 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-zs-navy mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Coming Q4 2025 */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">
+            Coming Q4 2025
+          </h2>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {comingSoonFeatures.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <Card key={index} className="border-0 shadow-lg bg-gradient-to-br from-gray-50 to-gray-100 opacity-75">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-600 mb-4">{feature.title}</h3>
+                  <p className="text-gray-500 leading-relaxed">{feature.description}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

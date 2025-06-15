@@ -10,11 +10,19 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background satellite image with no gradient overlay */}
+      {/* Background satellite image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+        }}
+      />
+      
+      {/* Gradient overlay matching the reference image */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg, rgba(8, 26, 47, 0.8) 0%, rgba(244, 106, 29, 0.3) 100%)"
         }}
       />
       

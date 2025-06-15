@@ -18,8 +18,8 @@ const Hero = () => {
         }}
       />
       
-      {/* Grey transparent overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-30" />
+      {/* Navy blue filter overlay */}
+      <div className="absolute inset-0 bg-primary-navy bg-opacity-60" />
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">

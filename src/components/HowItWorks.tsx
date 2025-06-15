@@ -1,4 +1,5 @@
 
+
 import { Download, Search, Upload, CheckCircle, ArrowRight } from "lucide-react";
 
 const HowItWorks = () => {
@@ -52,7 +53,7 @@ const HowItWorks = () => {
                 </div>
               )}
               
-              <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10 w-full">
+              <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10 w-full h-full flex flex-col">
                 <div 
                   className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
                   style={{
@@ -66,7 +67,7 @@ const HowItWorks = () => {
                   {step.title}
                 </h3>
                 
-                <p className="text-neutral-90 leading-relaxed">
+                <p className="text-neutral-90 leading-relaxed flex-grow">
                   {step.description}
                 </p>
               </div>
@@ -79,3 +80,4 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
+

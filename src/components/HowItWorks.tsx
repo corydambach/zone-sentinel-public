@@ -1,5 +1,4 @@
 
-
 import { Download, Search, Upload, CheckCircle, ArrowRight } from "lucide-react";
 
 const HowItWorks = () => {
@@ -27,9 +26,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-navy-10">
+    <section id="how-it-works" className="py-16 bg-navy-10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4">
             How It Works
           </h2>
@@ -80,4 +79,3 @@ const HowItWorks = () => {
 };
 
 export default HowItWorks;
-

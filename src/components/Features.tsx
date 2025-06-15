@@ -40,10 +40,10 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-navy-10">
+    <section id="features" className="py-16 bg-navy-10">
       <div className="container mx-auto px-4">
         {/* Features Available Today */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4 font-inter">
             Features Available Today
           </h2>
@@ -52,7 +52,7 @@ const Features = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {availableFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -70,7 +70,7 @@ const Features = () => {
         </div>
 
         {/* Coming Q4 2025 */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4 font-inter">
             Coming Q4 2025
           </h2>

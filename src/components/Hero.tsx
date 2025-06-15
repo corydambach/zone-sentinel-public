@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -11,13 +10,16 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background satellite image - raw without any overlay */}
+      {/* Background satellite image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
         }}
       />
+      
+      {/* Grey transparent overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-30" />
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">
@@ -56,4 +58,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

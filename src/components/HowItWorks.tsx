@@ -1,5 +1,5 @@
 
-import { Download, Search, Upload } from "lucide-react";
+import { Download, Search, Upload, CheckCircle, ArrowRight } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
@@ -12,6 +12,11 @@ const HowItWorks = () => {
       icon: Search,
       title: "Detect",
       description: "AI algorithms analyze imagery to identify code violations with precision and speed."
+    },
+    {
+      icon: CheckCircle,
+      title: "Verify",
+      description: "Boots on the ground confirm detected violations and capture authentic photos for your staff."
     },
     {
       icon: Download,
@@ -28,19 +33,26 @@ const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-xl text-neutral-90 max-w-2xl mx-auto">
-            Three simple steps to transform aerial imagery into actionable code enforcement data
+            Four simple steps to transform aerial imagery into actionable code enforcement data
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              {/* Connector line */}
+            <div key={index} className="relative flex flex-col items-center">
+              {/* Step number */}
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary-navy text-cloud-white rounded-full flex items-center justify-center text-sm font-bold z-20">
+                {index + 1}
+              </div>
+              
+              {/* Arrow connector */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-brand-gradient transform translate-x-4 z-0" />
+                <div className="hidden md:block absolute top-12 left-full w-8 h-0.5 bg-primary-navy transform translate-x-4 z-0">
+                  <ArrowRight className="absolute -top-2 right-0 h-4 w-4 text-primary-navy" />
+                </div>
               )}
               
-              <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10">
+              <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10 w-full">
                 <div 
                   className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
                   style={{

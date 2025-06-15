@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -17,13 +18,8 @@ const Hero = () => {
         }}
       />
       
-      {/* Gradient overlay using the lighter blue from reference */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(244, 106, 29, 0.3) 100%)"
-        }}
-      />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/40" />
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">

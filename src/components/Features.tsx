@@ -56,7 +56,7 @@ const Features = () => {
           {availableFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Card key={index} className="border-0 shadow-sm bg-cloud-white">
+              <Card key={index} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-accent-orange rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="h-8 w-8 text-cloud-white" />
@@ -80,7 +80,7 @@ const Features = () => {
           {comingSoonFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <Card key={index} className="border-0 shadow-sm bg-cloud-white opacity-75">
+              <Card key={index} className="border-0 shadow-sm bg-cloud-white opacity-75 hover:opacity-90 hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-matte-grey rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="h-8 w-8 text-cloud-white" />

@@ -26,7 +26,7 @@ const Hero = () => {
           {/* Main headline */}
           <h1 className="text-3xl md:text-5xl font-bold text-cloud-white mb-4 leading-tight font-inter">
             Satellite-Speed
-            <span className="block text-accent-orange font-bold">
+            <span className="block text-accent-orange font-bold" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}>
               Code Enforcement.
             </span>
           </h1>
@@ -35,11 +35,11 @@ const Hero = () => {
           <div className="space-y-2 mb-6">
             <p className="text-lg md:text-xl text-cloud-white font-semibold">
               Abandoned-Vehicle Detection — 
-              <span className="text-accent-orange"> Live Today.</span>
+              <span className="text-accent-orange" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}> Live Today.</span>
             </p>
             <p className="text-base md:text-lg text-matte-grey-light">
               Full Violation Coverage Launching 
-              <span className="text-accent-orange font-semibold"> Q4 2025.</span>
+              <span className="text-accent-orange font-semibold" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}> Q4 2025.</span>
             </p>
           </div>
           

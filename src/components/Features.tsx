@@ -84,7 +84,7 @@ const Features = () => {
                 <CardContent className="p-8 text-center h-full flex flex-col">
                   <div 
                     className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                    style={{ backgroundColor: '#ff1493' }}
+                    style={{ backgroundColor: '#1e3a5f' }}
                   >
                     <IconComponent className="h-8 w-8 text-cloud-white" />
                   </div>

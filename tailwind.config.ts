@@ -63,23 +63,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// ZoneSentinel Corporate Color Palette
+				// Updated ZoneSentinel Color Palette
 				'primary-navy': '#081A2F',
 				'navy-70': '#123F66',
 				'navy-10': '#E8EEF4',
 				'accent-orange': '#F46A1D',
 				'orange-20': '#FFD3B2',
-				'accent-salmon': '#FF6D75',
-				'deep-purple': '#7044FF',
-				'neutral-90': '#4B5563',
-				'neutral-40': '#D1D5DB',
+				'matte-grey': '#6B7280',
+				'matte-grey-light': '#9CA3AF',
+				'neon-green': '#10B981',
+				'neon-green-hover': '#059669',
 				'cloud-white': '#FFFFFF'
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				'brand-gradient': 'linear-gradient(180deg, #F46A1D 0%, #BE2E77 50%, #7044FF 100%)',
+				'brand-gradient': 'linear-gradient(180deg, #F46A1D 0%, #081A2F 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

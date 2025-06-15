@@ -18,13 +18,13 @@ const Hero = () => {
         }}
       />
       
-      {/* Brand gradient overlay at 60% opacity */}
-      <div className="absolute inset-0 bg-gradient-to-r from-accent-orange via-[#BE2E77] to-deep-purple opacity-60" />
+      {/* Navy to Orange gradient overlay at 60% opacity */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-navy via-navy-70 to-accent-orange opacity-60" />
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">
           {/* Main headline */}
-          <h1 className="text-3xl md:text-5xl font-bold text-primary-navy mb-4 leading-tight font-inter">
+          <h1 className="text-3xl md:text-5xl font-bold text-cloud-white mb-4 leading-tight font-inter">
             Satellite-Speed
             <span className="block bg-brand-gradient bg-clip-text text-transparent">
               Code Enforcement.
@@ -33,20 +33,20 @@ const Hero = () => {
           
           {/* Sub-lines */}
           <div className="space-y-2 mb-6">
-            <p className="text-lg md:text-xl text-primary-navy font-semibold">
+            <p className="text-lg md:text-xl text-cloud-white font-semibold">
               Abandoned-Vehicle Detection — 
               <span className="text-accent-orange"> Live Today.</span>
             </p>
-            <p className="text-base md:text-lg text-neutral-90">
+            <p className="text-base md:text-lg text-matte-grey-light">
               Full Violation Coverage Launching 
-              <span className="text-deep-purple font-semibold"> Q4 2025.</span>
+              <span className="text-accent-orange font-semibold"> Q4 2025.</span>
             </p>
           </div>
           
-          {/* CTA Button */}
+          {/* CTA Button - Primary action with neon green */}
           <Button 
             onClick={scrollToWaitlist}
-            className="bg-accent-orange hover:bg-gradient-to-r hover:from-accent-orange hover:to-deep-purple text-cloud-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="bg-neon-green hover:bg-neon-green-hover text-cloud-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             Join the Waitlist
             <ArrowDown className="ml-2 h-5 w-5 animate-pulse-slow" />

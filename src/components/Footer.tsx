@@ -26,7 +26,7 @@ const Footer = () => {
                 <button
                   key={link.label}
                   onClick={() => scrollToSection(link.href.substring(1))}
-                  className="block text-cloud-white/70 hover:text-accent-orange transition-colors duration-300"
+                  className="block text-matte-grey-light hover:text-accent-orange transition-colors duration-300"
                 >
                   {link.label}
                 </button>
@@ -39,7 +39,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold text-cloud-white mb-4">Contact</h3>
             <a 
               href="mailto:info@zonesentinel.com"
-              className="text-cloud-white/70 hover:text-accent-orange transition-colors duration-300"
+              className="text-matte-grey-light hover:text-accent-orange transition-colors duration-300"
             >
               info@zonesentinel.com
             </a>
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-navy-70 pt-8 text-center">
-          <p className="text-cloud-white/60 text-sm">
+          <p className="text-matte-grey-light text-sm">
             © 2024 ZoneSentinel. All rights reserved.
           </p>
         </div>

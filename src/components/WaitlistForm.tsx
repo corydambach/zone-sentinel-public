@@ -45,13 +45,13 @@ const WaitlistForm = () => {
   };
 
   return (
-    <section id="waitlist" className="py-20 bg-gradient-to-br from-primary-navy to-deep-purple">
+    <section id="waitlist" className="py-20 bg-gradient-to-br from-primary-navy to-navy-70">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-cloud-white mb-6">
             Get Early Access
           </h2>
-          <p className="text-xl text-cloud-white/90 mb-8 leading-relaxed">
+          <p className="text-xl text-matte-grey-light mb-8 leading-relaxed">
             Join our waitlist to be the first to access the complete ZoneSentinel violation detection suite when it launches in Q4 2025.
           </p>
           
@@ -61,19 +61,19 @@ const WaitlistForm = () => {
               placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-cloud-white/10 border-neutral-40 text-cloud-white placeholder:text-cloud-white/60 rounded-xl px-6 py-4 text-lg focus:ring-accent-orange focus:border-accent-orange"
+              className="flex-1 bg-cloud-white/10 border-matte-grey text-cloud-white placeholder:text-matte-grey-light rounded-xl px-6 py-4 text-lg focus:ring-neon-green focus:border-neon-green"
               disabled={isLoading}
             />
             <Button
               type="submit"
               disabled={isLoading}
-              className="bg-primary-navy hover:bg-navy-70 text-cloud-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-neon-green hover:bg-neon-green-hover text-cloud-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               {isLoading ? "Joining..." : "Join Waitlist"}
             </Button>
           </form>
           
-          <p className="text-cloud-white/70 text-sm mt-4">
+          <p className="text-matte-grey-light text-sm mt-4">
             No spam, unsubscribe at any time.
           </p>
         </div>

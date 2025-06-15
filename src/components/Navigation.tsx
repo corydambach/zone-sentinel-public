@@ -49,10 +49,10 @@ const Navigation = () => {
     } border-b border-navy-70`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Made 2x larger */}
+          {/* Logo - Updated with new image */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
-              src="/lovable-uploads/14e8bf63-6ff5-4ff3-b948-e7356ef30669.png" 
+              src="/lovable-uploads/cee72ce9-b982-4887-acd8-d6c77d180a5e.png" 
               alt="ZoneSentinel" 
               className="h-24 md:h-28 w-auto max-w-[360px] md:max-w-[500px]"
             />

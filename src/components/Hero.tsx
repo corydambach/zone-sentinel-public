@@ -17,11 +17,11 @@ const Hero = () => {
         }}
       />
       
-      {/* Gradient overlay using the correct navy from reference */}
+      {/* Gradient overlay using the lighter blue from reference */}
       <div 
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(135deg, rgba(8, 26, 47, 0.8) 0%, rgba(244, 106, 29, 0.3) 100%)"
+          background: "linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(244, 106, 29, 0.3) 100%)"
         }}
       />
       

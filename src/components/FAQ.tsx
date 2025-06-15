@@ -24,25 +24,25 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-zs-gray">
+    <section id="faq" className="py-20 bg-navy-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-90 max-w-2xl mx-auto">
             Everything you need to know about ZoneSentinel
           </p>
         </div>
         
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <details key={index} className="bg-white rounded-xl shadow p-6 mb-4 group">
-              <summary className="font-semibold text-zs-navy text-lg cursor-pointer list-none flex items-center justify-between">
+            <details key={index} className="bg-cloud-white rounded-xl shadow-sm p-6 mb-4 group">
+              <summary className="font-semibold text-primary-navy text-lg cursor-pointer list-none flex items-center justify-between">
                 {faq.question}
-                <span className="text-zs-orange group-open:rotate-45 transition-transform duration-200">+</span>
+                <span className="text-accent-orange group-open:rotate-45 transition-transform duration-200">+</span>
               </summary>
-              <div className="mt-4 text-gray-600 leading-relaxed">
+              <div className="mt-4 text-neutral-90 leading-relaxed">
                 {faq.answer}
               </div>
             </details>

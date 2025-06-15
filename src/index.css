@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -39,20 +37,26 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* ZoneSentinel Corporate Color Variables */
+    --zs-primary-navy: #081A2F;
+    --zs-navy-70: #123F66;
+    --zs-navy-10: #E8EEF4;
+    --zs-accent-orange: #F46A1D;
+    --zs-orange-20: #FFD3B2;
+    --zs-accent-salmon: #FF6D75;
+    --zs-deep-purple: #7044FF;
+    --zs-neutral-90: #4B5563;
+    --zs-neutral-40: #D1D5DB;
+    --zs-cloud-white: #FFFFFF;
+    --zs-brand-gradient: linear-gradient(180deg, #F46A1D 0%, #BE2E77 50%, #7044FF 100%);
   }
 
   .dark {

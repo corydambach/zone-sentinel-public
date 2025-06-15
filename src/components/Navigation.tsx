@@ -32,7 +32,7 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false); // Close mobile menu after navigation
+    setIsOpen(false);
   };
 
   const navItems = [
@@ -44,19 +44,15 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-zs-navy-10/90 backdrop-blur-md border-b border-zs-gray-40/50' 
-        : 'bg-zs-cloud-white border-b border-zs-gray-40'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary-navy border-b border-navy-70`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-14">
-          {/* Logo - smaller size */}
+          {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
               src="/lovable-uploads/bab7bf8e-bd9f-4bfe-8029-3a34406adb9f.png" 
               alt="ZoneSentinel" 
-              className="h-10 w-auto"
+              className="h-8 md:h-10 w-auto max-w-[140px] md:max-w-[200px]"
             />
           </div>
 
@@ -66,13 +62,13 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-zs-primary-navy hover:text-zs-accent-orange transition-colors duration-300 font-medium relative ${
-                  activeSection === item.id ? "text-zs-accent-orange" : ""
+                className={`text-cloud-white hover:text-orange-20 transition-colors duration-300 font-medium relative ${
+                  activeSection === item.id ? "text-orange-20" : ""
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-zs-accent-orange" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-orange" />
                 )}
               </button>
             ))}
@@ -82,11 +78,11 @@ const Navigation = () => {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <button className="text-zs-primary-navy hover:text-zs-accent-orange p-2">
+                <button className="text-cloud-white hover:text-orange-20 p-2">
                   <Menu className="h-6 w-6" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-64">
+              <SheetContent side="right" className="w-64 bg-primary-navy border-navy-70">
                 <div className="flex flex-col space-y-6 mt-8">
                   {navItems.map((item) => (
                     <button
@@ -94,8 +90,8 @@ const Navigation = () => {
                       onClick={() => scrollToSection(item.id)}
                       className={`text-left text-lg font-medium transition-colors duration-300 ${
                         activeSection === item.id 
-                          ? "text-zs-accent-orange" 
-                          : "text-zs-primary-navy hover:text-zs-accent-orange"
+                          ? "text-orange-20" 
+                          : "text-cloud-white hover:text-orange-20"
                       }`}
                     >
                       {item.label}

@@ -1,3 +1,4 @@
+
 import { Download, Search, Upload } from "lucide-react";
 
 const HowItWorks = () => {
@@ -20,13 +21,13 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-zs-gray">
+    <section id="how-it-works" className="py-20 bg-navy-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-zs-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4">
             How It Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-90 max-w-2xl mx-auto">
             Three simple steps to transform aerial imagery into actionable code enforcement data
           </p>
         </div>
@@ -36,19 +37,19 @@ const HowItWorks = () => {
             <div key={index} className="relative">
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-zs-orange to-zs-purple transform translate-x-4 z-0" />
+                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-brand-gradient transform translate-x-4 z-0" />
               )}
               
-              <div className="relative bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 text-center z-10">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-zs-orange to-zs-purple rounded-xl flex items-center justify-center">
-                  <step.icon className="h-8 w-8 text-white" />
+              <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10">
+                <div className="w-16 h-16 mx-auto mb-6 bg-brand-gradient rounded-xl flex items-center justify-center">
+                  <step.icon className="h-8 w-8 text-cloud-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-zs-navy mb-3">
+                <h3 className="text-2xl font-bold text-primary-navy mb-3">
                   {step.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-neutral-90 leading-relaxed">
                   {step.description}
                 </p>
               </div>

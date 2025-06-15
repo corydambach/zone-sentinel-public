@@ -21,22 +21,22 @@ const SecurityBadges = () => {
   ];
 
   return (
-    <section className="py-16 bg-zs-gray">
+    <section className="py-16 bg-navy-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-zs-navy mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-4">
             Security & Compliance
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-neutral-90">
             Built for government and enterprise requirements
           </p>
         </div>
         
         <div className="flex gap-6 justify-center items-start mt-16 text-center">
           {badges.map((badge, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-md max-w-xs">
+            <div key={index} className="bg-cloud-white rounded-xl p-6 shadow-sm max-w-xs">
               <div className="text-4xl mb-4">{badge.emoji}</div>
-              <h3 className="text-lg font-semibold text-zs-navy">
+              <h3 className="text-lg font-semibold text-primary-navy">
                 {badge.label}
               </h3>
             </div>

@@ -1,11 +1,11 @@
 
-import { Map, Filter, FileText, Trash2, Building2, Trees } from "lucide-react";
+import { MapPin, Filter, FileSpreadsheet, Trash2, Building, Sprout } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Features = () => {
   const availableFeatures = [
     {
-      icon: Map,
+      icon: MapPin,
       title: "Street-Level Map Viewer",
       description: "Interactive mapping interface with satellite overlay and street-level detail for precise violation identification"
     },
@@ -15,7 +15,7 @@ const Features = () => {
       description: "Advanced filtering capabilities to focus enforcement efforts on specific neighborhoods or districts"
     },
     {
-      icon: FileText,
+      icon: FileSpreadsheet,
       title: "CSV Export",
       description: "One-click export of violation data for integration with existing enforcement workflows and reporting systems"
     }
@@ -28,12 +28,12 @@ const Features = () => {
       description: "Automated detection of unauthorized waste disposal sites"
     },
     {
-      icon: Building2,
+      icon: Building,
       title: "Unsafe Structures",
       description: "Identification of deteriorating buildings and safety hazards"
     },
     {
-      icon: Trees,
+      icon: Sprout,
       title: "Overgrown Lots",
       description: "Detection of unmaintained properties and vegetation violations"
     }

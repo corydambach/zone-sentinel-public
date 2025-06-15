@@ -45,16 +45,16 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-primary-navy/95 backdrop-blur-sm' : 'bg-primary-navy'
+      isScrolled ? 'bg-primary-navy/80 backdrop-blur-md' : 'bg-primary-navy'
     } border-b border-navy-70`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo - Made larger */}
+          {/* Logo - Made 2x larger */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
               src="/lovable-uploads/14e8bf63-6ff5-4ff3-b948-e7356ef30669.png" 
               alt="ZoneSentinel" 
-              className="h-12 md:h-14 w-auto max-w-[180px] md:max-w-[250px]"
+              className="h-24 md:h-28 w-auto max-w-[360px] md:max-w-[500px]"
             />
           </div>
 

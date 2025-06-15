@@ -41,7 +41,7 @@ const HowItWorks = () => {
               )}
               
               <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10">
-                <div className="w-16 h-16 mx-auto mb-6 bg-brand-gradient rounded-xl flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary-navy to-accent-orange rounded-xl flex items-center justify-center">
                   <step.icon className="h-8 w-8 text-cloud-white" />
                 </div>
                 

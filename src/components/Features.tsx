@@ -85,8 +85,8 @@ const Features = () => {
                   <div className="w-16 h-16 bg-matte-grey rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="h-8 w-8 text-cloud-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-matte-grey mb-4 font-inter">{feature.title}</h3>
-                  <p className="text-matte-grey/70 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
+                  <p className="text-matte-grey leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             );

@@ -18,8 +18,8 @@ const Hero = () => {
         }}
       />
       
-      {/* Navy blue filter overlay */}
-      <div className="absolute inset-0 bg-primary-navy bg-opacity-60" />
+      {/* Navy to Orange gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-navy-70/80 via-primary-navy/60 to-accent-orange/40" />
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">

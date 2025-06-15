@@ -1,5 +1,4 @@
 
-
 import { MapPin, Filter, FileSpreadsheet, Trash2, Building, Sprout } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -83,7 +82,7 @@ const Features = () => {
             return (
               <Card key={index} className="border-0 shadow-sm bg-cloud-white opacity-75 hover:opacity-90 hover:shadow-lg transition-all duration-300 h-full">
                 <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#081A2F' }}>
+                  <div className="w-16 h-16 bg-primary-navy rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="h-8 w-8 text-cloud-white" />
                   </div>
                   <h3 className="text-xl font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
@@ -99,4 +98,3 @@ const Features = () => {
 };
 
 export default Features;
-

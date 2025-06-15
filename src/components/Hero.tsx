@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16">
+    <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background satellite image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -26,7 +26,7 @@ const Hero = () => {
           {/* Main headline */}
           <h1 className="text-3xl md:text-5xl font-bold text-cloud-white mb-4 leading-tight font-inter">
             Satellite-Speed
-            <span className="block bg-brand-gradient bg-clip-text text-transparent">
+            <span className="block text-accent-orange font-bold">
               Code Enforcement.
             </span>
           </h1>

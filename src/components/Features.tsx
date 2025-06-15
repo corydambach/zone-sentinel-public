@@ -47,7 +47,7 @@ const Features = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4 font-inter">
             Features Available Today
           </h2>
-          <p className="text-xl text-neutral-90 max-w-3xl mx-auto">
+          <p className="text-xl text-matte-grey max-w-3xl mx-auto">
             Start using ZoneSentinel's abandoned vehicle detection with these powerful tools
           </p>
         </div>
@@ -58,11 +58,11 @@ const Features = () => {
             return (
               <Card key={index} className="border-0 shadow-sm bg-cloud-white">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-brand-gradient rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-accent-orange rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="h-8 w-8 text-cloud-white" />
                   </div>
                   <h3 className="text-xl font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
-                  <p className="text-neutral-90 leading-relaxed">{feature.description}</p>
+                  <p className="text-matte-grey leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             );
@@ -82,11 +82,11 @@ const Features = () => {
             return (
               <Card key={index} className="border-0 shadow-sm bg-cloud-white opacity-75">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-neutral-90 to-neutral-40 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-matte-grey rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="h-8 w-8 text-cloud-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-neutral-90 mb-4 font-inter">{feature.title}</h3>
-                  <p className="text-neutral-90/70 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-matte-grey mb-4 font-inter">{feature.title}</h3>
+                  <p className="text-matte-grey/70 leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             );

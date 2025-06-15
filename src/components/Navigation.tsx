@@ -48,13 +48,13 @@ const Navigation = () => {
       isScrolled ? 'bg-primary-navy/95 backdrop-blur-sm' : 'bg-primary-navy'
     } border-b border-navy-70`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16">
+          {/* Logo - Made larger */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img 
               src="/lovable-uploads/14e8bf63-6ff5-4ff3-b948-e7356ef30669.png" 
               alt="ZoneSentinel" 
-              className="h-8 md:h-10 w-auto max-w-[140px] md:max-w-[200px]"
+              className="h-12 md:h-14 w-auto max-w-[180px] md:max-w-[250px]"
             />
           </div>
 
@@ -64,13 +64,13 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-cloud-white hover:text-accent-orange transition-colors duration-300 font-medium relative ${
-                  activeSection === item.id ? "text-accent-orange" : ""
+                className={`text-cloud-white hover:text-orange-20 transition-colors duration-300 font-medium relative ${
+                  activeSection === item.id ? "text-orange-20" : ""
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent-orange" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-20" />
                 )}
               </button>
             ))}
@@ -80,7 +80,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <button className="text-cloud-white hover:text-accent-orange p-2">
+                <button className="text-cloud-white hover:text-orange-20 p-2">
                   <Menu className="h-6 w-6" />
                 </button>
               </SheetTrigger>
@@ -92,8 +92,8 @@ const Navigation = () => {
                       onClick={() => scrollToSection(item.id)}
                       className={`text-left text-lg font-medium transition-colors duration-300 ${
                         activeSection === item.id 
-                          ? "text-accent-orange" 
-                          : "text-cloud-white hover:text-accent-orange"
+                          ? "text-orange-20" 
+                          : "text-cloud-white hover:text-orange-20"
                       }`}
                     >
                       {item.label}

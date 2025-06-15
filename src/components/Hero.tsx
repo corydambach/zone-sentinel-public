@@ -10,21 +10,13 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background satellite image */}
+      {/* Background satellite image with no gradient overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
         }}
       />
-      
-      {/* More selective gradient overlay that avoids orange text areas */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-primary-navy/80 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary-navy/80 to-transparent" />
-        <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-primary-navy/70 to-transparent" />
-        <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-primary-navy/70 to-transparent" />
-      </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">

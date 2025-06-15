@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
@@ -18,11 +17,11 @@ const Hero = () => {
         }}
       />
       
-      {/* Gradient overlay matching the reference image */}
+      {/* Gradient overlay matching the original banner */}
       <div 
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(135deg, rgba(8, 26, 47, 0.8) 0%, rgba(244, 106, 29, 0.3) 100%)"
+          background: "linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(249, 115, 22, 0.3) 100%)"
         }}
       />
       

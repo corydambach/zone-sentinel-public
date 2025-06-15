@@ -18,8 +18,8 @@ const Hero = () => {
         }}
       />
       
-      {/* Navy to Orange gradient overlay at 60% opacity */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-navy via-navy-70 to-accent-orange opacity-60" />
+      {/* More neutral gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-navy/80 via-slate-800/70 to-primary-navy/75" />
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">

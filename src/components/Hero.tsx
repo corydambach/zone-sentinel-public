@@ -18,8 +18,13 @@ const Hero = () => {
         }}
       />
       
-      {/* More neutral gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-navy/80 via-slate-800/70 to-primary-navy/75" />
+      {/* More selective gradient overlay that avoids orange text areas */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-primary-navy/80 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary-navy/80 to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-primary-navy/70 to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-primary-navy/70 to-transparent" />
+      </div>
       
       <div className="relative z-10 container mx-auto px-4 text-center max-w-3xl">
         <div className="animate-fade-in">
@@ -39,7 +44,7 @@ const Hero = () => {
             </p>
             <p className="text-base md:text-lg text-matte-grey-light" style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.8)' }}>
               Full Violation Coverage Launching 
-              <span className="text-accent-orange font-semibold" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)' }}> Q4 2025.</span>
+              <span className="text-accent-orange font-semibold" style={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.9)' }}> Q4 2025.</span>
             </p>
           </div>
           

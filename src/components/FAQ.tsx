@@ -2,24 +2,28 @@
 const FAQ = () => {
   const faqs = [
     {
-      question: "How fresh is your imagery?",
-      answer: "Typically < 30 cm resolution captured in the last 90 days."
+      question: "What is ZoneSentinel?",
+      answer: "A GIS-powered platform that flags municipal code violations—starting with abandoned vehicles—using aerial imagery and AI."
     },
     {
-      question: "What's the false-positive rate?",
-      answer: "< 1.5 % in pilots."
+      question: "Where does your imagery come from?",
+      answer: "Commercial 30 cm satellite + periodic drone passes licensed from our data partners; all feeds are refreshed at least twice a month in pilot cities."
     },
     {
-      question: "How do we receive violation data?",
-      answer: "CSV download, REST API, or Open311."
+      question: "How accurate is the AI detection?",
+      answer: "In live pilots we average 92% precision / 88% recall for abandoned-vehicle tagging; on-street verification closes the remaining gap."
     },
     {
-      question: "Is citizen privacy protected?",
-      answer: "We blur faces & plates by default; no PII stored."
+      question: "Is my data secure?",
+      answer: "All uploads and wait-list emails are encrypted in transit (TLS 1.3). No personal info is shared outside ZoneSentinel."
     },
     {
-      question: "Can we start with one neighborhood?",
-      answer: "Yes, custom AOIs supported."
+      question: "What does it cost?",
+      answer: "Beta access is free. Final pricing will be tiered by parcel count and API calls—think < $0.05 per property per year."
+    },
+    {
+      question: "When will full code-violation coverage launch?",
+      answer: "Q4 2025: illegal dumps, unsafe structures, overgrown lots, and more. Join the wait-list to get notified first."
     }
   ];
 

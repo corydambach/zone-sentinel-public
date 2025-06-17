@@ -1,6 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import ProblemPromiseProof from "@/components/ProblemPromiseProof";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
 import SecurityBadges from "@/components/SecurityBadges";
@@ -14,6 +15,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <ProblemPromiseProof />
       <HowItWorks />
       <Features />
       <SecurityBadges />

@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import WaitlistDialog from "@/components/WaitlistDialog";
 
 const Hero = () => {
   const scrollToWaitlist = () => {
@@ -44,13 +45,12 @@ const Hero = () => {
           </div>
           
           {/* CTA Button - Primary action with neon green */}
-          <Button 
-            onClick={scrollToWaitlist}
-            className="bg-neon-green hover:bg-neon-green-hover text-cloud-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-          >
-            Join the Waitlist
-            <ArrowDown className="ml-2 h-5 w-5 animate-pulse-slow" />
-          </Button>
+          <WaitlistDialog>
+            <Button className="bg-neon-green hover:bg-neon-green-hover text-cloud-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Join the Waitlist
+              <ArrowDown className="ml-2 h-5 w-5 animate-pulse-slow" />
+            </Button>
+          </WaitlistDialog>
         </div>
       </div>
     </section>

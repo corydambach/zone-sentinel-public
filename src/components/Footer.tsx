@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70">
+    <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70 relative">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Quick Links */}
@@ -66,6 +66,15 @@ const Footer = () => {
             © 2024 ZoneSentinel. All rights reserved.
           </p>
         </div>
+      </div>
+      
+      {/* Logo in bottom right */}
+      <div className="absolute bottom-4 right-4">
+        <img 
+          src="/lovable-uploads/24b14da8-3fa7-4dbe-af66-3098e31a0e32.png" 
+          alt="ZoneSentinel Logo" 
+          className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
+        />
       </div>
     </footer>
   );

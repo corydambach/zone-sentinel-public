@@ -1,16 +1,10 @@
-
 const Footer = () => {
-  return (
-    <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70">
+  return <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70">
       <div className="container mx-auto px-4">
         <div className="text-center">
           {/* Centered Logo */}
           <div className="mb-6">
-            <img 
-              src="/lovable-uploads/b7428391-4dc2-456e-b534-45f4bf7b392d.png" 
-              alt="ZoneSentinel Logo" 
-              className="h-24 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
-            />
+            <img src="/lovable-uploads/b7428391-4dc2-456e-b534-45f4bf7b392d.png" alt="ZoneSentinel Logo" className="h-24 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300 object-fill" />
           </div>
           
           {/* Tagline */}
@@ -25,8 +19,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

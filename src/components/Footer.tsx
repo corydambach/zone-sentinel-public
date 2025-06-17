@@ -9,7 +9,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/b7428391-4dc2-456e-b534-45f4bf7b392d.png" 
               alt="ZoneSentinel Logo" 
-              className="h-16 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className="h-24 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
           

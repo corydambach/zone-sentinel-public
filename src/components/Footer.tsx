@@ -1,80 +1,29 @@
 
-import { Linkedin } from "lucide-react";
-
 const Footer = () => {
-  const quickLinks = [
-    { label: "Home", href: "#hero" },
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Privacy", href: "#privacy" }
-  ];
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70 relative">
+    <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold text-cloud-white mb-4">Quick Links</h3>
-            <nav className="space-y-2">
-              {quickLinks.map((link) => (
-                <button
-                  key={link.label}
-                  onClick={() => scrollToSection(link.href.substring(1))}
-                  className="block text-matte-grey-light hover:text-accent-orange transition-colors duration-300"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </nav>
+        <div className="text-center">
+          {/* Centered Logo */}
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/b7428391-4dc2-456e-b534-45f4bf7b392d.png" 
+              alt="ZoneSentinel Logo" 
+              className="h-16 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+            />
           </div>
           
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold text-cloud-white mb-4">Contact</h3>
-            <a 
-              href="mailto:info@zonesentinel.com"
-              className="text-matte-grey-light hover:text-accent-orange transition-colors duration-300"
-            >
-              info@zonesentinel.com
-            </a>
-          </div>
-          
-          {/* Social Links */}
-          <div>
-            <h3 className="text-xl font-bold text-cloud-white mb-4">Follow Us</h3>
-            <a 
-              href="https://linkedin.com/company/zonesentinel" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-cloud-white hover:text-accent-orange transition-colors duration-300"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5 mr-2" />
-              LinkedIn
-            </a>
-          </div>
+          {/* Tagline */}
+          <p className="text-matte-grey-light text-lg max-w-2xl mx-auto leading-relaxed">
+            Automatically flag code violations from above — AI-powered satellite scans, no fieldwork required.
+          </p>
         </div>
         
-        <div className="border-t border-navy-70 pt-8 text-center">
+        <div className="border-t border-navy-70 pt-8 mt-12 text-center">
           <p className="text-matte-grey-light text-sm">
             © 2024 ZoneSentinel. All rights reserved.
           </p>
         </div>
-      </div>
-      
-      {/* Logo in bottom right */}
-      <div className="absolute bottom-4 right-4">
-        <img 
-          src="/lovable-uploads/24b14da8-3fa7-4dbe-af66-3098e31a0e32.png" 
-          alt="ZoneSentinel Logo" 
-          className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
-        />
       </div>
     </footer>
   );

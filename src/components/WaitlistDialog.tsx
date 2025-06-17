@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-import { ArrowDown } from "lucide-react";
 
 interface WaitlistFormData {
   name: string;
@@ -54,9 +53,28 @@ const WaitlistDialog = ({ children }: WaitlistDialogProps) => {
     try {
       console.log("Submitting waitlist form:", data);
       
+      // Create email content
+      const emailSubject = "ZoneSentinel Waitlist Submission";
+      const emailBody = `
+New waitlist submission:
+
+Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company || 'Not provided'}
+Message: ${data.message || 'No message provided'}
+
+Submitted on: ${new Date().toLocaleString()}
+      `.trim();
+      
+      // Create mailto link
+      const mailtoLink = `mailto:david@pinesapholdings.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
       toast({
-        title: "Success!",
-        description: "Thank you for joining our waitlist. We'll be in touch soon!",
+        title: "Email Client Opened",
+        description: "Please send the pre-filled email to complete your waitlist submission.",
       });
       
       form.reset();
@@ -64,11 +82,10 @@ const WaitlistDialog = ({ children }: WaitlistDialogProps) => {
     } catch (error) {
       console.error("Waitlist submission error:", error);
       toast({
-        title: "Thank you!",
-        description: "Your interest has been recorded. We'll be in touch soon!",
+        title: "Error",
+        description: "There was an issue opening your email client. Please try again.",
+        variant: "destructive",
       });
-      form.reset();
-      setIsOpen(false);
     } finally {
       setIsLoading(false);
     }
@@ -162,7 +179,7 @@ const WaitlistDialog = ({ children }: WaitlistDialogProps) => {
               disabled={isLoading}
               className="w-full bg-neon-green hover:bg-neon-green-hover text-cloud-white font-semibold py-3 rounded-xl"
             >
-              {isLoading ? "Joining..." : "Join Waitlist"}
+              {isLoading ? "Opening Email..." : "Join Waitlist"}
             </Button>
           </form>
         </Form>

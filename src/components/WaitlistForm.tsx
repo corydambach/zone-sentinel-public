@@ -26,19 +26,34 @@ const WaitlistForm = () => {
     try {
       console.log("Submitting email to waitlist:", email);
       
+      // Create email content
+      const emailSubject = "ZoneSentinel Waitlist Submission";
+      const emailBody = `
+New waitlist submission:
+
+Email: ${email}
+Submitted on: ${new Date().toLocaleString()}
+      `.trim();
+      
+      // Create mailto link
+      const mailtoLink = `mailto:david@pinesapholdings.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open email client
+      window.location.href = mailtoLink;
+      
       toast({
-        title: "Success!",
-        description: "You've been added to our waitlist. We'll notify you when the full suite launches!",
+        title: "Email Client Opened",
+        description: "Please send the pre-filled email to complete your waitlist submission.",
       });
       
       setEmail("");
     } catch (error) {
       console.error("Waitlist submission error:", error);
       toast({
-        title: "Thank you!",
-        description: "Your interest has been recorded. We'll be in touch soon!",
+        title: "Error",
+        description: "There was an issue opening your email client. Please try again.",
+        variant: "destructive",
       });
-      setEmail("");
     } finally {
       setIsLoading(false);
     }
@@ -69,7 +84,7 @@ const WaitlistForm = () => {
               disabled={isLoading}
               className="bg-neon-green hover:bg-neon-green-hover text-cloud-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              {isLoading ? "Joining..." : "Join Waitlist"}
+              {isLoading ? "Opening Email..." : "Join Waitlist"}
             </Button>
           </form>
           

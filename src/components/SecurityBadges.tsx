@@ -33,7 +33,7 @@ const SecurityBadges = () => {
             Security & Compliance
           </h2>
           <p className="text-xl text-neutral-90">
-            Designed for compliance. Built for peace of mind
+            Designed for compliance. Built for peace of mind.
           </p>
         </div>
         

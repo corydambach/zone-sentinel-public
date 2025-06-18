@@ -126,7 +126,7 @@ const Features = () => {
                           feature.badgeColor === 'navy' 
                             ? 'bg-primary-navy text-cloud-white' 
                             : 'bg-accent-orange text-cloud-white'
-                        } text-xs px-3 py-1 rounded-full`}
+                        } text-xs px-3 py-1 rounded-full text-center inline-flex items-center justify-center`}
                       >
                         {feature.feature}
                       </Badge>

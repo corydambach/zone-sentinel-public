@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           {/* Centered Logo */}
-          <div className="mb-4">
+          <div className="mb-2">
             <img src="/lovable-uploads/cee72ce9-b982-4887-acd8-d6c77d180a5e.png" alt="ZoneSentinel Logo" className="h-24 md:h-28 w-auto max-w-[360px] md:max-w-[500px] mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300" />
           </div>
           

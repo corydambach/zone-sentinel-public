@@ -1,5 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Features = () => {
   const availableFeatures = [
@@ -29,27 +30,32 @@ const Features = () => {
     {
       feature: "Unpermitted Construction",
       whatWeCatch: "New additions, accessory dwellings, extra driveways, and solar installs that never pulled a permit",
-      whyItMatters: "Recovers lost permit revenue, enforces zoning limits, and reduces downstream liability before projects finish."
+      whyItMatters: "Recovers lost permit revenue, enforces zoning limits, and reduces downstream liability before projects finish.",
+      badgeColor: "navy"
     },
     {
       feature: "Fire-Life Safety Hazards",
       whatWeCatch: "Blocked hydrants, missing fire escapes, rooftop propane tanks, and other code-red risks",
-      whyItMatters: "Lets fire marshals pinpoint high-risk sites and issue orders before an incident triggers lawsuits."
+      whyItMatters: "Lets fire marshals pinpoint high-risk sites and issue orders before an incident triggers lawsuits.",
+      badgeColor: "orange"
     },
     {
       feature: "Storm-Water Compliance",
       whatWeCatch: "Illegal grading, filled wetlands, or paved areas that exceed impervious-surface caps",
-      whyItMatters: "Protects waterways, meets MS4 requirements, and captures impact-fee dollars the city is owed."
+      whyItMatters: "Protects waterways, meets MS4 requirements, and captures impact-fee dollars the city is owed.",
+      badgeColor: "navy"
     },
     {
       feature: "Vacant & Blighted Properties",
       whatWeCatch: "Long-term unoccupied structures, broken windows, collapsing roofs, and unsecured entries",
-      whyItMatters: "Accelerates receivership actions, curbs squatting, and stabilizes neighborhoods' tax base."
+      whyItMatters: "Accelerates receivership actions, curbs squatting, and stabilizes neighborhoods' tax base.",
+      badgeColor: "orange"
     },
     {
       feature: "Impervious-Surface Audits",
       whatWeCatch: "Driveway expansions, parking-lot creep, and patio builds hidden from tax rolls",
-      whyItMatters: "Automates fee recalculations for storm-water utility bills, adding guaranteed recurring revenue."
+      whyItMatters: "Automates fee recalculations for storm-water utility bills, adding guaranteed recurring revenue.",
+      badgeColor: "navy"
     }
   ];
 
@@ -80,15 +86,17 @@ const Features = () => {
           </div>
           
           {/* Second row - 2 cards centered */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {availableFeatures.slice(3, 5).map((feature, index) => (
-              <Card key={index + 3} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
-                <CardContent className="p-6 text-center h-full flex flex-col">
-                  <h3 className="text-lg font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
-                  <p className="text-matte-grey leading-relaxed flex-grow text-sm">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+              {availableFeatures.slice(3, 5).map((feature, index) => (
+                <Card key={index + 3} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
+                  <CardContent className="p-6 text-center h-full flex flex-col">
+                    <h3 className="text-lg font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
+                    <p className="text-matte-grey leading-relaxed flex-grow text-sm">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -101,7 +109,7 @@ const Features = () => {
         
         <div className="flex justify-center">
           <div className="overflow-x-auto max-w-6xl">
-            <table className="bg-cloud-white rounded-xl shadow-sm">
+            <table className="bg-cloud-white rounded-xl shadow-sm mx-auto">
               <thead>
                 <tr className="border-b border-navy-10">
                   <th className="text-left p-4 font-bold text-primary-navy">Feature</th>
@@ -112,7 +120,17 @@ const Features = () => {
               <tbody>
                 {comingSoonFeatures.map((feature, index) => (
                   <tr key={index} className="border-b border-navy-10 last:border-b-0 opacity-75">
-                    <td className="p-4 font-semibold text-primary-navy">{feature.feature}</td>
+                    <td className="p-4">
+                      <Badge 
+                        className={`${
+                          feature.badgeColor === 'navy' 
+                            ? 'bg-primary-navy text-cloud-white' 
+                            : 'bg-accent-orange text-cloud-white'
+                        } text-xs px-3 py-1 rounded-full`}
+                      >
+                        {feature.feature}
+                      </Badge>
+                    </td>
                     <td className="p-4 text-matte-grey text-sm">{feature.whatWeCatch}</td>
                     <td className="p-4 text-matte-grey text-sm">{feature.whyItMatters}</td>
                   </tr>

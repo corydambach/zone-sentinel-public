@@ -4,22 +4,22 @@ import { Download, Search, Upload, CheckCircle, ArrowRight } from "lucide-react"
 const HowItWorks = () => {
   const steps = [
     {
-      icon: Upload,
+      icon: "🔄",
       title: "Ingest",
       description: "Fresh satellite and aerial imagery is automatically processed from multiple high-resolution sources."
     },
     {
-      icon: Search,
+      icon: "🔍",
       title: "Detect",
       description: "AI algorithms analyze imagery to identify code violations with precision and speed."
     },
     {
-      icon: CheckCircle,
+      icon: "✅",
       title: "Verify",
       description: "Boots on the ground confirm detected violations and capture authentic photos for your staff."
     },
     {
-      icon: Download,
+      icon: "📤",
       title: "Export",
       description: "Violation alerts are formatted and delivered to your enforcement workflow systems."
     }
@@ -54,12 +54,12 @@ const HowItWorks = () => {
               
               <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10 w-full h-full flex flex-col">
                 <div 
-                  className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
+                  className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center text-3xl"
                   style={{
                     background: "linear-gradient(135deg, #1e3a8a 0%, #f97316 100%)"
                   }}
                 >
-                  <step.icon className="h-8 w-8 text-cloud-white" />
+                  {step.icon}
                 </div>
                 
                 <h3 className="text-2xl font-bold text-primary-navy mb-3">

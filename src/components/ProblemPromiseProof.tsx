@@ -3,28 +3,44 @@ const ProblemPromiseProof = () => {
   return (
     <section className="py-16 bg-cloud-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Problem */}
           <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-6">
-            The patrol gap is growing.
+            Your streets shouldn't wait 53 days.
           </h2>
-          <p className="text-xl text-neutral-90 mb-12 leading-relaxed">
-            Code officers can't cover every street. Abandoned vehicles linger for weeks, 
-            wasting scarce resources.
+          <p className="text-xl text-neutral-90 mb-8 leading-relaxed">
+            Philadelphia's 311 logged 39k abandoned-vehicle complaints last year—its #1 quality-of-life issue.<br />
+            Each sits curbside for weeks, draining safety, parking, and property values.
           </p>
           
-          {/* Promise */}
-          <h3 className="text-2xl md:text-3xl font-bold text-primary-navy mb-6">
-            ZoneSentinel does the patrol work for you.
-          </h3>
+          {/* Proof-point bullets */}
+          <div className="text-left max-w-4xl mx-auto mb-8 space-y-3">
+            <div className="flex items-start space-x-3">
+              <span className="text-accent-orange font-bold text-lg">•</span>
+              <p className="text-neutral-90">15-17% property-value drain within 150 ft of a derelict car; that's up to $247M lost annually in western-PA municipalities</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-accent-orange font-bold text-lg">•</span>
+              <p className="text-neutral-90">Average tow + storage costs can top $360 per vehicle—money burned on backlog, not beautification</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-accent-orange font-bold text-lg">•</span>
+              <p className="text-neutral-90">Seattle police process ~4,200 abandoned-car reports every month; scale matters</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-accent-orange font-bold text-lg">•</span>
+              <p className="text-neutral-90">Hawaii County now budgets $3.73M a year to clear 1,581 junked vehicles—double 2018 spending</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-accent-orange font-bold text-lg">•</span>
+              <p className="text-neutral-90">Derelict cars leak mercury, lead, battery acid and attract rats, raccoons, and illicit activity</p>
+            </div>
+          </div>
           
-          {/* Proof */}
-          <div className="bg-gradient-to-r from-primary-navy to-accent-orange text-cloud-white rounded-xl p-8 inline-block">
-            <p className="text-2xl md:text-3xl font-bold">
-              92% precision / 88% recall
-            </p>
-            <p className="text-lg mt-2 opacity-90">
-              in live pilots
+          {/* Value promise */}
+          <div className="bg-gradient-to-r from-primary-navy to-accent-orange text-cloud-white rounded-xl p-8">
+            <p className="text-xl md:text-2xl font-bold leading-relaxed">
+              ZoneSentinel pinpoints abandoned cars within days of when they appear, not within days of when they happen to be reported. We slash patrol times to let crews remove hazards before the 311 ticket is filed.
             </p>
           </div>
         </div>

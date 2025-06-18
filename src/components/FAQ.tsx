@@ -35,7 +35,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-neutral-90 max-w-2xl mx-auto">
-            Everything you need to know about ZoneSentinel
+            Ground truth on everything ZoneSentinel
           </p>
         </div>
         

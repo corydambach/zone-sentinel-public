@@ -1,10 +1,11 @@
+
 const Footer = () => {
   return <footer id="contact" className="bg-primary-navy py-16 border-t border-navy-70">
       <div className="container mx-auto px-4">
         <div className="text-center">
           {/* Centered Logo */}
           <div className="mb-6">
-            <img src="/lovable-uploads/b7428391-4dc2-456e-b534-45f4bf7b392d.png" alt="ZoneSentinel Logo" className="h-24 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300 object-fill" />
+            <img src="/lovable-uploads/cee72ce9-b982-4887-acd8-d6c77d180a5e.png" alt="ZoneSentinel Logo" className="h-24 md:h-28 w-auto max-w-[360px] md:max-w-[500px] mx-auto opacity-80 hover:opacity-100 transition-opacity duration-300" />
           </div>
           
           {/* Tagline */}

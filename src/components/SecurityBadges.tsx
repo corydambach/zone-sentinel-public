@@ -1,5 +1,5 @@
 
-import { Lock, Shield, FileText } from "lucide-react";
+import { Lock, Shield, FileText, Server } from "lucide-react";
 
 const SecurityBadges = () => {
   const badges = [
@@ -17,6 +17,11 @@ const SecurityBadges = () => {
       icon: FileText,
       label: "CJIS-Aligned Workflows",
       emoji: "📄"
+    },
+    {
+      icon: Server,
+      label: "FedRAMP-ready Architecture",
+      emoji: "🏛️"
     }
   ];
 
@@ -28,15 +33,15 @@ const SecurityBadges = () => {
             Security & Compliance
           </h2>
           <p className="text-xl text-neutral-90">
-            Built for government and enterprise requirements
+            Designed for compliance. Built for peace of mind
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
           {badges.map((badge, index) => (
-            <div key={index} className="bg-cloud-white rounded-xl p-6 shadow-sm text-center mx-auto w-full max-w-xs">
-              <div className="text-4xl mb-4">{badge.emoji}</div>
-              <h3 className="text-lg font-semibold text-primary-navy">
+            <div key={index} className="bg-cloud-white rounded-xl p-4 shadow-sm text-center mx-auto w-full">
+              <div className="text-3xl mb-3">{badge.emoji}</div>
+              <h3 className="text-sm md:text-base font-semibold text-primary-navy leading-tight">
                 {badge.label}
               </h3>
             </div>

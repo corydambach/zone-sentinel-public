@@ -1,41 +1,55 @@
 
-import { MapPin, Filter, FileSpreadsheet, Trash2, Building, Sprout } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Features = () => {
   const availableFeatures = [
     {
-      icon: MapPin,
-      title: "Street-Level Map Viewer",
-      description: "Interactive mapping interface with satellite overlay and street-level detail for precise violation identification"
+      title: "Geospatial Search",
+      description: "Instantly zoom to any parcel, block, or coordinate. Filter by zoning class, imagery date, or open cases so staff land on the right spot—no GIS expertise required."
     },
     {
-      icon: Filter,
-      title: "Filter by Block",
-      description: "Advanced filtering capabilities to focus enforcement efforts on specific neighborhoods or districts"
+      title: "AI-Assisted Violation Detection", 
+      description: "Computer-vision models scan new aerial and street-level imagery to flag abandoned vehicles, illegal structures, and debris. >90 % precision/recall in pilots slashes manual review to edge cases only."
     },
     {
-      icon: FileSpreadsheet,
-      title: "CSV Export",
-      description: "One-click export of violation data for integration with existing enforcement workflows and reporting systems"
+      title: "Eyewitness Confirmation",
+      description: "Field inspectors—or even residents—tap a secure link to confirm a flagged location, upload photos, and leave notes. Inputs sync back to the case file and retrain the model, tightening accuracy over time."
+    },
+    {
+      title: "Multi-Platform Export",
+      description: "One-click export to Esri, GovOS, Excel, or any system via REST/GeoJSON. ZoneSentinel slots into your current workflow instead of replacing it."
+    },
+    {
+      title: "Violation Issuance",
+      description: "Generate pre-filled notice letters, set compliance deadlines, and schedule re-inspections in a single step. Templates mirror your municipal code to keep every citation airtight."
     }
   ];
 
   const comingSoonFeatures = [
     {
-      icon: Trash2,
-      title: "Illegal Dumps",
-      description: "Automated detection of unauthorized waste disposal sites"
+      feature: "Unpermitted Construction",
+      whatWeCatch: "New additions, accessory dwellings, extra driveways, and solar installs that never pulled a permit",
+      whyItMatters: "Recovers lost permit revenue, enforces zoning limits, and reduces downstream liability before projects finish."
     },
     {
-      icon: Building,
-      title: "Unsafe Structures",
-      description: "Identification of deteriorating buildings and safety hazards"
+      feature: "Fire-Life Safety Hazards",
+      whatWeCatch: "Blocked hydrants, missing fire escapes, rooftop propane tanks, and other code-red risks",
+      whyItMatters: "Lets fire marshals pinpoint high-risk sites and issue orders before an incident triggers lawsuits."
     },
     {
-      icon: Sprout,
-      title: "Overgrown Lots",
-      description: "Detection of unmaintained properties and vegetation violations"
+      feature: "Storm-Water Compliance",
+      whatWeCatch: "Illegal grading, filled wetlands, or paved areas that exceed impervious-surface caps",
+      whyItMatters: "Protects waterways, meets MS4 requirements, and captures impact-fee dollars the city is owed."
+    },
+    {
+      feature: "Vacant & Blighted Properties",
+      whatWeCatch: "Long-term unoccupied structures, broken windows, collapsing roofs, and unsecured entries",
+      whyItMatters: "Accelerates receivership actions, curbs squatting, and stabilizes neighborhoods' tax base."
+    },
+    {
+      feature: "Impervious-Surface Audits",
+      whatWeCatch: "Driveway expansions, parking-lot creep, and patio builds hidden from tax rolls",
+      whyItMatters: "Automates fee recalculations for storm-water utility bills, adding guaranteed recurring revenue."
     }
   ];
 
@@ -52,21 +66,15 @@ const Features = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-          {availableFeatures.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <Card key={index} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
-                <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div className="w-16 h-16 bg-accent-orange rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <IconComponent className="h-8 w-8 text-cloud-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
-                  <p className="text-matte-grey leading-relaxed flex-grow">{feature.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
+          {availableFeatures.map((feature, index) => (
+            <Card key={index} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
+              <CardContent className="p-6 text-center h-full flex flex-col">
+                <h3 className="text-lg font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
+                <p className="text-matte-grey leading-relaxed flex-grow text-sm">{feature.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Coming Q4 2025 */}
@@ -76,24 +84,27 @@ const Features = () => {
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {comingSoonFeatures.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <Card key={index} className="border-0 shadow-sm bg-cloud-white opacity-75 hover:opacity-90 hover:shadow-lg transition-all duration-300 h-full">
-                <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div 
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                    style={{ backgroundColor: '#1e3a5f' }}
-                  >
-                    <IconComponent className="h-8 w-8 text-cloud-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
-                  <p className="text-matte-grey leading-relaxed flex-grow">{feature.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="max-w-6xl mx-auto">
+          <div className="overflow-x-auto">
+            <table className="w-full bg-cloud-white rounded-xl shadow-sm">
+              <thead>
+                <tr className="border-b border-navy-10">
+                  <th className="text-left p-4 font-bold text-primary-navy">Feature</th>
+                  <th className="text-left p-4 font-bold text-primary-navy">What We Catch</th>
+                  <th className="text-left p-4 font-bold text-primary-navy">Why It Matters</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comingSoonFeatures.map((feature, index) => (
+                  <tr key={index} className="border-b border-navy-10 last:border-b-0 opacity-75">
+                    <td className="p-4 font-semibold text-primary-navy">{feature.feature}</td>
+                    <td className="p-4 text-matte-grey text-sm">{feature.whatWeCatch}</td>
+                    <td className="p-4 text-matte-grey text-sm">{feature.whyItMatters}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>

@@ -1,27 +1,31 @@
 
-import { Download, Search, Upload, CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
     {
       icon: "🔄",
       title: "Ingest",
-      description: "Fresh satellite and aerial imagery is automatically processed from multiple high-resolution sources."
+      description: "Fresh satellite and aerial imagery is automatically processed from multiple high-resolution sources.",
+      color: "#3b82f6" // blue
     },
     {
       icon: "🔍",
       title: "Detect",
-      description: "AI algorithms analyze imagery to identify code violations with precision and speed."
+      description: "AI algorithms analyze imagery to identify code violations with precision and speed.",
+      color: "#10b981" // green
     },
     {
       icon: "✅",
       title: "Verify",
-      description: "Boots on the ground confirm detected violations and capture authentic photos for your staff."
+      description: "Boots on the ground confirm detected violations and capture authentic photos for your staff.",
+      color: "#f59e0b" // amber
     },
     {
       icon: "📤",
       title: "Export",
-      description: "Violation alerts are formatted and delivered to your enforcement workflow systems."
+      description: "Violation alerts are formatted and delivered to your enforcement workflow systems.",
+      color: "#ef4444" // red
     }
   ];
 
@@ -47,17 +51,15 @@ const HowItWorks = () => {
               
               {/* Arrow connector */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-full w-8 h-0.5 bg-primary-navy transform translate-x-4 z-0">
-                  <ArrowRight className="absolute -top-2 right-0 h-4 w-4 text-primary-navy" />
+                <div className="hidden md:flex absolute top-16 left-full items-center justify-center w-8 z-10">
+                  <ArrowRight className="h-6 w-6 text-primary-navy" />
                 </div>
               )}
               
               <div className="relative bg-cloud-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center z-10 w-full h-full flex flex-col">
                 <div 
-                  className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center text-3xl"
-                  style={{
-                    background: "linear-gradient(135deg, #1e3a8a 0%, #f97316 100%)"
-                  }}
+                  className="w-20 h-20 mx-auto mb-6 rounded-xl flex items-center justify-center text-4xl"
+                  style={{ backgroundColor: step.color }}
                 >
                   {step.icon}
                 </div>

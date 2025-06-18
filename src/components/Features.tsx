@@ -66,15 +66,30 @@ const Features = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
-          {availableFeatures.map((feature, index) => (
-            <Card key={index} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
-              <CardContent className="p-6 text-center h-full flex flex-col">
-                <h3 className="text-lg font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
-                <p className="text-matte-grey leading-relaxed flex-grow text-sm">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-7xl mx-auto mb-16">
+          {/* First row - 3 cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
+            {availableFeatures.slice(0, 3).map((feature, index) => (
+              <Card key={index} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
+                <CardContent className="p-6 text-center h-full flex flex-col">
+                  <h3 className="text-lg font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
+                  <p className="text-matte-grey leading-relaxed flex-grow text-sm">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Second row - 2 cards centered */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {availableFeatures.slice(3, 5).map((feature, index) => (
+              <Card key={index + 3} className="border-0 shadow-sm bg-cloud-white hover:shadow-lg transition-shadow duration-300 h-full">
+                <CardContent className="p-6 text-center h-full flex flex-col">
+                  <h3 className="text-lg font-bold text-primary-navy mb-4 font-inter">{feature.title}</h3>
+                  <p className="text-matte-grey leading-relaxed flex-grow text-sm">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Coming Q4 2025 */}
@@ -84,9 +99,9 @@ const Features = () => {
           </h2>
         </div>
         
-        <div className="max-w-6xl mx-auto">
-          <div className="overflow-x-auto">
-            <table className="w-full bg-cloud-white rounded-xl shadow-sm">
+        <div className="flex justify-center">
+          <div className="overflow-x-auto max-w-6xl">
+            <table className="bg-cloud-white rounded-xl shadow-sm">
               <thead>
                 <tr className="border-b border-navy-10">
                   <th className="text-left p-4 font-bold text-primary-navy">Feature</th>

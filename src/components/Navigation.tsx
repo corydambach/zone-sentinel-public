@@ -54,7 +54,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/cee72ce9-b982-4887-acd8-d6c77d180a5e.png" 
               alt="ZoneSentinel" 
-              className="h-10 sm:h-12 md:h-14 w-auto max-w-[200px] sm:max-w-[260px] md:max-w-[320px] object-contain"
+              className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto max-w-[200px] sm:max-w-[260px] md:max-w-[360px] lg:max-w-[440px] object-contain"
             />
           </div>
 

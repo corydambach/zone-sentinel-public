@@ -48,13 +48,13 @@ const Navigation = () => {
       isScrolled ? 'bg-primary-navy/80 backdrop-blur-md' : 'bg-primary-navy'
     } border-b border-navy-70`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo - Updated with new image */}
-          <div className="flex items-center cursor-pointer" onClick={() => scrollToSection("hero")}>
+          <div className="flex items-center cursor-pointer min-w-0 flex-shrink" onClick={() => scrollToSection("hero")}>
             <img 
               src="/lovable-uploads/cee72ce9-b982-4887-acd8-d6c77d180a5e.png" 
               alt="ZoneSentinel" 
-              className="h-24 md:h-28 w-auto max-w-[360px] md:max-w-[500px]"
+              className="h-10 sm:h-12 md:h-14 w-auto max-w-[200px] sm:max-w-[260px] md:max-w-[320px] object-contain"
             />
           </div>
 

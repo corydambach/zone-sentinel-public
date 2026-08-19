@@ -100,7 +100,7 @@ Submitted on: ${new Date().toLocaleString()}
         <DialogHeader>
           <DialogTitle className="text-primary-navy">Join the Waitlist</DialogTitle>
           <DialogDescription>
-            Get early access to ZoneSentinel when the full suite launches in Q4 2025.
+            Get early access to ZoneSentinel when the full suite launches in Q1 2027.
           </DialogDescription>
         </DialogHeader>
         

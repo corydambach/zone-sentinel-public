@@ -64,7 +64,7 @@ const Features = () => {
       <div className="container mx-auto px-4">
         {/* Features Available Today */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4 font-inter">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-4 font-inter">
             Features Available Today
           </h2>
           <p className="text-xl text-matte-grey max-w-3xl mx-auto">
@@ -100,10 +100,10 @@ const Features = () => {
           </div>
         </div>
 
-        {/* Coming Q4 2025 */}
+        {/* Coming Q1 2027 */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4 font-inter">
-            Coming Q4 2025
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-navy mb-4 font-inter">
+            Coming Q1 2027
           </h2>
         </div>
         

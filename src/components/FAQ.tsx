@@ -23,7 +23,7 @@ const FAQ = () => {
     },
     {
       question: "When will full code-violation coverage launch?",
-      answer: "Q4 2025: illegal dumps, unsafe structures, overgrown lots, and more. Join the wait-list to get notified first."
+      answer: "Q1 2027: illegal dumps, unsafe structures, overgrown lots, and more. Join the wait-list to get notified first."
     }
   ];
 

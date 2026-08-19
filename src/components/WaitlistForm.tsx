@@ -67,7 +67,7 @@ Submitted on: ${new Date().toLocaleString()}
             Get Early Access
           </h2>
           <p className="text-xl text-matte-grey-light mb-8 leading-relaxed">
-            Join our waitlist to be the first to access the complete ZoneSentinel violation detection suite when it launches in Q4 2025.
+            Join our waitlist to be the first to access the complete ZoneSentinel violation detection suite when it launches in Q1 2027.
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

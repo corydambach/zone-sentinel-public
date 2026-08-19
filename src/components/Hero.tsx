@@ -40,7 +40,7 @@ const Hero = () => {
             </p>
             <p className="text-base md:text-lg text-matte-grey-light" style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.8)' }}>
               Full Violation Coverage Launching 
-              <span className="text-accent-orange font-semibold" style={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.9)' }}> Q4 2025.</span>
+              <span className="text-accent-orange font-semibold" style={{ textShadow: '4px 4px 8px rgba(0, 0, 0, 0.9)' }}> Q1 2027.</span>
             </p>
           </div>
           

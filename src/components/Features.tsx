@@ -100,10 +100,10 @@ const Features = () => {
           </div>
         </div>
 
-        {/* Coming Q4 2025 */}
+        {/* Coming Q1 2027 */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4 font-inter">
-            Coming Q4 2025
+            Coming Q1 2027
           </h2>
         </div>
         

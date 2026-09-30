@@ -1,0 +1,72 @@
+name: Tag prod release
+
+on:
+  push:
+    branches: [prod]
+
+# Serialize runs so two quick merges can't claim the same build number
+concurrency:
+  group: tag-prod
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # need full history + all tags
+
+      - name: Compute next version
+        id: ver
+        env:
+          VAR_MAJOR: ${{ vars.VERSION_MAJOR }}
+          VAR_MINOR: ${{ vars.VERSION_MINOR }}
+        run: |
+          set -euo pipefail
+
+          # 1) VERSION file in repo (e.g. "1.4") takes precedence
+          # 2) otherwise fall back to repo variables VERSION_MAJOR / VERSION_MINOR
+          if [ -f VERSION ]; then
+            IFS=. read -r MAJOR MINOR _ < <(tr -d '[:space:]' < VERSION)
+            SOURCE="VERSION file"
+          else
+            MAJOR="${VAR_MAJOR:-}"
+            MINOR="${VAR_MINOR:-}"
+            SOURCE="repo variables"
+          fi
+
+          if ! [[ "$MAJOR" =~ ^[0-9]+$ && "$MINOR" =~ ^[0-9]+$ ]]; then
+            echo "::error::Could not read major/minor from $SOURCE (got '$MAJOR' / '$MINOR')"
+            exit 1
+          fi
+
+          # Skip if this commit is already tagged (e.g. workflow re-run)
+          EXISTING=$(git tag --points-at HEAD | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' || true)
+          if [ -n "$EXISTING" ]; then
+            echo "HEAD already tagged: $EXISTING"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Highest existing build for this major.minor; resets to 0 when major/minor changes
+          LAST=$(git tag -l "v${MAJOR}.${MINOR}.*" \
+                 | sed -E "s/^v${MAJOR}\.${MINOR}\.//" \
+                 | grep -E '^[0-9]+$' | sort -n | tail -1 || true)
+          if [ -z "$LAST" ]; then BUILD=0; else BUILD=$((LAST + 1)); fi
+
+          TAG="v${MAJOR}.${MINOR}.${BUILD}"
+          echo "Next tag: $TAG (major/minor from $SOURCE)"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Create and push tag
+        if: steps.ver.outputs.skip == 'false'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git tag -a "${{ steps.ver.outputs.tag }}" -m "Release ${{ steps.ver.outputs.tag }}"
+          git push origin "${{ steps.ver.outputs.tag }}"

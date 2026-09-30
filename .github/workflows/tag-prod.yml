@@ -31,7 +31,8 @@ jobs:
           # 1) VERSION file in repo (e.g. "1.4") takes precedence
           # 2) otherwise fall back to repo variables VERSION_MAJOR / VERSION_MINOR
           if [ -f VERSION ]; then
-            IFS=. read -r MAJOR MINOR _ < <(tr -d '[:space:]' < VERSION)
+            VER=$(tr -d '[:space:]' < VERSION)
+            IFS=. read -r MAJOR MINOR _ <<< "$VER"
             SOURCE="VERSION file"
           else
             MAJOR="${VAR_MAJOR:-}"
